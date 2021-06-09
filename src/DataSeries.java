@@ -1,0 +1,8 @@
+
+/**
+ * @author 
+ *
+ */
+public class DataSeries {
+
+}
