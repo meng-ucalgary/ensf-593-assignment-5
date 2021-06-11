@@ -1,0 +1,38 @@
+@startuml
+class TextAnalyzer
+{
+    -numOfSentences: int
+    -numOfWords: int
+    +TextAnalyzer(str: String)
+    +getNumOfSentences(): int
+    +getNumOfWords(): int
+    +toString(): String
+}
+
+class JFrame {
+}
+
+interface ActionListener {
+}
+
+class TextAnalysisGUI
+{
+    -userInputArea: JTextArea
+    -outputArea: JTextArea
+    -resetButton: JButton
+    -analyzeButton: JButton
+    -textAnalyzer: TextAnalyzer
+    -inputPrompt: String
+    -outputPrompt: String
+    +TextAnalysisGUI(title: String)
+    +actionPerformed(e: ActionEvent): void
+    +{static} main(args: String[]): void
+}
+
+JFrame <|-- TextAnalysisGUI
+ActionListener <|.. TextAnalysisGUI
+
+TextAnalysisGUI *-- TextAnalyzer
+TextAnalysisGUI *-- JTextArea
+TextAnalysisGUI *-- JButton
+@enduml
