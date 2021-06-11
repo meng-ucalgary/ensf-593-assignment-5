@@ -1,0 +1,68 @@
+@startuml
+class KeyboardReader
+{
+    -reader: BufferedReader
+    +KeyboardReader()
+    +getKeyboardInput(): String
+    +getKeyboardInteger(): int
+    +getKeyboardDouble(): double
+    +prompt(s: String): void
+    +display(s: String): void
+    -readKeyboard(): String
+}
+
+class DataAnalysisCLI
+{
+    -data: DataFrame
+    -reader: KeyboardReader
+    +DataAnalysisCLI()
+    +run(): void
+    +{static} main(args: String[]): void
+}
+
+DataAnalysisCLI *-- KeyboardReader
+
+class DataFrame
+{
+    -headerNames: String[]
+    -data: double[][]
+    -numOfRows: int
+    -numOfCols: int
+    +DataFrame(filename: String)
+    +getColumnByIndex(x: int): DataSeries
+    +getHeaderNames(): String[]
+    +getNumOfRows(): int
+    +getNumOfCols(): int
+    +toString(): String
+}
+
+DataAnalysisCLI *-- DataFrame
+
+class DataSeries
+{
+    -label: String
+    -data: double[]
+    -count: int
+    +DataSeries(label: String)
+    +add(x: double): void
+    +size(): int
+    +getMin(): double
+    +getMax(): double
+    +getSum(): double
+    +getMean(): double
+    +toString(): String
+}
+
+DataFrame --> DataSeries
+DataAnalysisCLI --> DataSeries
+
+abstract class IBasicStats
+{
+    getMin(): double
+    getMax(): double
+    getSum(): double
+    getMean(): double
+}
+
+IBasicStats <|.. DataSeries
+@enduml
