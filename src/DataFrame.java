@@ -170,7 +170,7 @@ public class DataFrame {
         for (i = 0; i < halves; i++) {
             sb.append("|");
             for (int j = 0; j < this.data[i].length; j++) {
-                sb.append(String.format(" %s |", String.format("%-" + padding[j] + "s", String.format("%.2f", this.data[i][j]))));
+                sb.append(String.format(" %s |", String.format("%" + padding[j] + "s", String.format("%.2f", this.data[i][j]))));
             }
 
             sb.append("\n");
@@ -195,7 +195,7 @@ public class DataFrame {
         for (; i < this.numOfRows; i++) {
             sb.append("|");
             for (int j = 0; j < this.data[i].length; j++) {
-                sb.append(String.format(" %s |", String.format("%-" + padding[j] + "s", String.format("%.2f", this.data[i][j]))));
+                sb.append(String.format(" %s |", String.format("%" + padding[j] + "s", String.format("%.2f", this.data[i][j]))));
             }
 
             sb.append("\n");
