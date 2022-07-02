@@ -1,7 +1,9 @@
-# a5-analysis
-A graphical and a command line user interface combining most of what we have seen.
+# ENSF-593 Assignment 5
+
+An assignment on a graphical and a command line user interface combining most of what we have seen.
 
 This assignment has two mandatory parts:
+
 - [1. Text Analysis GUI](#1-text-analysis-gui)
 - [2. Data Analysis](#2-data-analysis)
 
@@ -17,7 +19,7 @@ Write a graphical user interface (GUI) application that allows a user to type or
 
 The GUI should prompt the user to enter text in a `JTextArea`, the input. A second `JTextArea` is used to display the results, the output. There are two `JButton` elements: `analyze` and `clear`. The former to trigger text analysis and display of the results, the latter to clear all text areas.
 
-Many of the components can be found in `StatsGUI` used in the previous assignment. You are free to layout the components, keeping in mind that multiple lines of text are potentially entered - the size of the input text area should allow a good view of the text. 
+Many of the components can be found in `StatsGUI` used in the previous assignment. You are free to layout the components, keeping in mind that multiple lines of text are potentially entered - the size of the input text area should allow a good view of the text.
 
 **Design Specifications**
 
@@ -31,7 +33,7 @@ Two files `src/TextAnalysisGUI.java` and `src/TextAnalyzer.java` are created to 
 
 **Reporting**
 
-In the markdown file `TextAnalysis.md` add the UML class diagram of `TextAnalysisGUI` and `TextAnalyzer`, their dependencies and their relationships. Add JavaDoc and comments to all your classes. Include a screenshot demonstrating successful execution and outputs of analyzing the text in `test.txt` and `feynman.txt`. For the latter, there are 1071 words and 53 sentences. 
+In the markdown file `TextAnalysis.md` add the UML class diagram of `TextAnalysisGUI` and `TextAnalyzer`, their dependencies and their relationships. Add JavaDoc and comments to all your classes. Include a screenshot demonstrating successful execution and outputs of analyzing the text in `test.txt` and `feynman.txt`. For the latter, there are 1071 words and 53 sentences.
 
 # 2. Data Analysis
 
@@ -43,9 +45,9 @@ A command line interface (CLI) program prompts the user for the csv file name. T
 
 **CLI Specifications**
 
-The dialog is already implemented in `DataAnalysisCLI`'s run method. Input/Output is performed with a `KeyboardReader`. 
+The dialog is already implemented in `DataAnalysisCLI`'s run method. Input/Output is performed with a `KeyboardReader`.
 
-The dialog implemented in `src/DataAnalysisCLI.java` uses `src/KeyboardReader.java`, both  provided. Studying code in `src/DataAnalysisCLI.java` will be helpful to understand other classes and how they interact.
+The dialog implemented in `src/DataAnalysisCLI.java` uses `src/KeyboardReader.java`, both provided. Studying code in `src/DataAnalysisCLI.java` will be helpful to understand other classes and how they interact.
 
 **Design Specifications**
 
